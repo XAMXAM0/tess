@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+  
+  
+
+  <!-- Kategori -->
+<div class="category-buttons">
+  <button class="category" onclick="window.location.href='menu.html'">Cookies</button>
+  <button class="category" onclick="window.location.href='drink.html'">Drinks</button>
+  <button class="category" onclick="window.location.href='food.html'">Food</button>
+</div>
+
+
+
+<a href="index.html" class="home-button" onclick="specialEffect(event)">
+  🍪
+
+</a>
+
+<!-- Produk -->
+<div class="product-list">
+  <div class="product-card">
+    <img src="MAKAN1.jpg" alt="American Cheese Roll">
+    <h3>Spaghetti Bolognese</h3>
+    <p class="price-old">Rp. 43.000,00</p>
+    <p class="price-new">Rp. 40.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="MAKAN3.jpg" alt="American Cheese Roll">
+    <h3>Fetuchini carbonara</h3>
+    <p class="price-old">Rp. 50.000,00</p>
+    <p class="price-new">Rp. 45.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="MAKAN4.jpg" alt="Banana Cake">
+    <h3>honey chicken wings</h3>
+    <p class="price-old">Rp. 60.000,00</p>
+    <p class="price-new">Rp.  55.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+  <div class="product-card">
+    <img src="MAKAN5.jpg" alt="American Cheese Roll">
+    <h3>croissant</h3>
+    <p class="price-old">Rp. 28.000,00</p>
+    <p class="price-new">Rp. 25.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="MAKAN2.jpg" alt="Banana Cake">
+    <h3>Ramen</h3>
+    <p class="price-old">Rp. 55.000,00</p>
+    <p class="price-new">Rp. 50.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="MAKAN6.jpg" alt="Banana Cake">
+    <h3>truffle fries</h3>
+    <p class="price-old">Rp. 33.000,00</p>
+    <p class="price-new">Rp. 30.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+  
+
+  <!-- Tambahkan produk lain sesuai kebutuhan -->
+</div>
+
+  
+</div>
+
+<script>
+function specialEffect(event) {
+  event.preventDefault(); // supaya efek jalan dulu sebelum pindah
+  const button = event.currentTarget;
+  button.style.transform = 'scale(1.5) rotate(360deg)';
+  button.style.transition = 'transform 0.5s ease';
+
+  setTimeout(() => {
+    window.location.href = button.href; // pindah halaman setelah animasi
+  }, 500);
+}
+</script>
+</body>
+</html>

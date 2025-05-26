@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Caste Cookies - Informasi Lokasi</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style2.css" >
+  
+</head>
+<body>
+
+<a href="index.html" class="home-button" onclick="specialEffect(event)">
+  🍪
+
+</a>
+
+
+
+  <header>
+    <h1>🍪Castle Cookies - Cookies Store🍪</h1>
+  </header>
+
+  <div class="container">
+    <h2>Tentang Castle Cookies</h2>
+    <p>
+      Caste Cookies adalah toko kue rumahan yang menyajikan aneka kue kering dan basah dengan cita rasa premium. 
+      Terkenal dengan cookies-nya yang renyah di luar, lembut di dalam, kami menggunakan bahan-bahan berkualitas dan tanpa pengawet. 
+      Lokasi kami strategis dan nyaman untuk dikunjungi bersama keluarga. Caste Cookies, manisnya kebersamaan dimulai dari sini!
+    </p>
+
+    <h2>Lokasi Toko</h2>
+    <div id="map"></div>
+  </div>
+
+  <footer>
+    &copy; 2025 Caste Cookies - Dibuat dengan 🍪 dan cinta
+  </footer>
+
+  <!-- Leaflet.js -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Koordinat lokasi toko: 5.197482, 96.684969
+    const map = L.map('map').setView([5.197482, 96.684969], 16);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([5.197482, 96.684969])
+      .addTo(map)
+      .bindPopup('<b>Caste Cookies</b><br>Toko kue Sukma Bangsa Bireuen')
+      .openPopup();
+  </script>
+
+</body>
+</html>

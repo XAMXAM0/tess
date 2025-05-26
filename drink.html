@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+  
+  
+
+  <!-- Kategori -->
+<div class="category-buttons">
+  <button class="category" onclick="window.location.href='menu.html'">Cookies</button>
+  <button class="category" onclick="window.location.href='drink.html'">Drinks</button>
+  <button class="category" onclick="window.location.href='food.html'">Food</button>
+</div>
+
+
+
+<a href="index.html" class="home-button" onclick="specialEffect(event)">
+  🍪
+
+</a>
+
+<!-- Produk -->
+<div class="product-list">
+  <div class="product-card">
+    <img src="DRINK1.jpg" alt="American Cheese Roll">
+    <h3>Stroberi milk shake</h3>
+    <p class="price-old">Rp. 25.000,00</p>
+    <p class="price-new">Rp. 22.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="DRINK5.jpg" alt="Banana Cake">
+    <h3>avocado coffee</h3>
+    <p class="price-old">Rp. 25.000,00</p>
+    <p class="price-new">Rp. 20.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="DRINK3.jpg" alt="American Cheese Roll">
+    <h3>tomato juice</h3>
+    <p class="price-old">Rp. 19.000,00</p>
+    <p class="price-new">Rp. 15.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="DRINK4.jpg" alt="Banana Cake">
+    <h3>blush root</h3>
+    <p class="price-old">Rp. 19.000,00</p>
+    <p class="price-new">Rp.  15.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+  <div class="product-card">
+    <img src="DRINK6.jpg" alt="American Cheese Roll">
+    <h3> Chocolate</h3>
+    <p class="price-old">Rp. 28.000,00</p>
+    <p class="price-new">Rp. 25.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="DRINK2.jpg" alt="Banana Cake">
+    <h3>Matcha</h3>
+    <p class="price-old">Rp. 27.000,00</p>
+    <p class="price-new">Rp. 25.000,00</p>
+    <div class="stars">★★★★★</div>
+    <button class="cart-btn">add to cart</button>
+  </div>
+  
+
+  <!-- Tambahkan produk lain sesuai kebutuhan -->
+</div>
+
+  
+</div>
+
+<script>
+function specialEffect(event) {
+  event.preventDefault(); // supaya efek jalan dulu sebelum pindah
+  const button = event.currentTarget;
+  button.style.transform = 'scale(1.5) rotate(360deg)';
+  button.style.transition = 'transform 0.5s ease';
+
+  setTimeout(() => {
+    window.location.href = button.href; // pindah halaman setelah animasi
+  }, 500);
+}
+</script>
+</body>
+</html>
